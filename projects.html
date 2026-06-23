@@ -1,0 +1,492 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Projects | AVG.DESIGN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,600;0,800;0,900;1,300&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#201f1f",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#2c3139",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary-fixed-dim": "#c2c6d2",
+                    "inverse-primary": "#556067",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#ffdaf2",
+                    "on-primary": "#273238",
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface-variant": "#c4c7ca",
+                    "surface-tint": "#bdc8d0",
+                    "secondary": "#ffaceb",
+                    "on-primary-fixed": "#131d23",
+                    "surface-bright": "#3a3939",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary": "#fefcff",
+                    "surface-container-highest": "#353534",
+                    "primary-fixed-dim": "#bdc8d0",
+                    "on-secondary-fixed": "#390034",
+                    "background": "#0C0C0C",
+                    "on-surface": "#e5e2e1",
+                    "secondary-container": "#b805aa",
+                    "outline": "#8d9194",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#3e484f",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed-dim": "#ffaceb",
+                    "outline-variant": "#43474a",
+                    "on-tertiary-container": "#5e636d",
+                    "on-tertiary-fixed-variant": "#424750",
+                    "on-tertiary-fixed": "#171c24",
+                    "surface": "#131313",
+                    "secondary-fixed": "#ffd7f2",
+                    "on-secondary": "#5d0055",
+                    "primary-fixed": "#d9e4ec",
+                    "on-secondary-fixed-variant": "#830079",
+                    "on-primary-container": "#5a656b",
+                    "tertiary-fixed": "#dee2ee",
+                    "on-background": "#e5e2e1",
+                    "tertiary-container": "#dce0ec",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#d7e2ea",
+                    "surface-dim": "#131313",
+                    "primary": "#fcfdff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-overlap": "60px",
+                    "gutter": "clamp(1rem, 5vw, 4rem)",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Kanit"],
+                    "headline-lg-mobile": ["Kanit"],
+                    "label-caps": ["Kanit"],
+                    "display-hero": ["Kanit"],
+                    "body-md": ["Kanit"]
+            },
+            "fontSize": {
+                    "headline-lg": ["clamp(2.5rem, 8vw, 5rem)", {"lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["3rem", {"lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                    "display-hero": ["clamp(3.5rem, 12vw, 10rem)", {"lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "900"}],
+                    "body-md": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        
+
+        body {
+            background-color: #0C0C0C;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fcfdff 0%, #bdc8d0 50%, #556067 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-card-glow {
+            box-shadow: inset 2px 2px 20px rgba(215, 226, 234, 0.05);
+            border: 1px solid rgba(215, 226, 234, 0.1);
+        }
+
+        .action-gradient {
+            background: linear-gradient(90deg, #ffaceb, #b805aa, #830079);
+        }
+
+        .contact-btn-outline {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .perspective-grid {
+            perspective: 1000px;
+        }
+
+        /* Smooth Tilt Transition */
+        .tilt-card {
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0C0C0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+    
+        .contact-btn-gradient {
+            background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px transparent;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .contact-btn-gradient:hover {
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Page Transition Overlay */
+        .page-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0C0C0C;
+            z-index: 99999;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .page-transition-overlay.fade-out {
+            opacity: 0;
+        }
+        </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-[100] bg-transparent backdrop-blur-xl border-b border-primary/10">
+<div class="flex justify-between items-center w-full px-gutter py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile font-black tracking-tighter text-primary uppercase" href="/index.html">
+                AVG
+            </a>
+<div class="hidden md:flex items-center gap-10">
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/about.html">About</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/projects.html">Projects</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="/contact.html" class="contact-btn-gradient px-8 py-3 rounded-full text-white font-label-caps text-center inline-block">
+                Contact
+            </a>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Menu">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl flex flex-col items-center gap-6 md:hidden transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none border-b border-primary/10 py-8 z-[-1]" id="mobile-menu-overlay">
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/about.html">About</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/projects.html">Projects</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/contact.html">Contact</a>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Header -->
+<header class="px-gutter mb-20 md:mb-32">
+<div class="max-w-container-max mx-auto overflow-hidden">
+<h1 class="font-display-hero text-display-hero text-gradient leading-none uppercase select-none">
+                    Projects
+                </h1>
+<div class="mt-8 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="max-w-xl text-on-surface-variant font-light">
+                        A collection of high-fidelity 3D assets, advanced environments, and seamless UI design. Each project pushes the boundary of technical execution and artistic vision.
+                    </p>
+<!-- Filters -->
+<div class="flex flex-wrap gap-6 md:gap-10 border-b border-surface-variant/20 pb-4">
+<button class="font-label-caps text-sm md:text-base text-primary border-b border-primary tracking-widest transition-all">All</button>
+<button class="font-label-caps text-sm md:text-base text-on-surface-variant hover:text-primary tracking-widest transition-all">3D Modeling</button>
+<button class="font-label-caps text-sm md:text-base text-on-surface-variant hover:text-primary tracking-widest transition-all">Motion</button>
+<button class="font-label-caps text-sm md:text-base text-on-surface-variant hover:text-primary tracking-widest transition-all">Animation</button>
+<button class="font-label-caps text-sm md:text-base text-on-surface-variant hover:text-primary tracking-widest transition-all">Scenarios</button>
+<button class="font-label-caps text-sm md:text-base text-on-surface-variant hover:text-primary tracking-widest transition-all">Product Design</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Project Grid -->
+<section class="px-gutter">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 lg:gap-x-12">
+<!-- Project Card 1 -->
+<a class="group cursor-pointer tilt-card flex flex-col gap-6" href="/engineered-stride.html" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic footwear concept designed for performance, combining woven organic textures, soft blue structural bands, warm earth-toned accents, and a porous midsole structure." src="./6.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">PRODUCT DESIGN</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">ENGINEERED STRIDE</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</a>
+<!-- Project Card 2 (Staggered) -->
+<a class="group cursor-pointer tilt-card flex flex-col gap-6 md:mt-24" href="/crimson-signature.html" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Crimson Signature motion design composition featuring bold red graphic accents and elegant white typography against a deep black background." src="./10.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">MOTION GRAPHICS</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">CRIMSON SIGNATURE</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</a>
+<!-- Project Card 3 -->
+<a class="group cursor-pointer tilt-card flex flex-col gap-6" href="/kinematic-form.html" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover object-[65%_center] transition-transform duration-700 group-hover:scale-110" data-alt="Kinematic Form hard-surface modeling study of a compact industrial robotic arm showing clean mechanical topology and articulated structure." src="./11.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">HARD SURFACE</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">KINEMATIC FORM</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</a>
+<!-- Project Card 4 -->
+<a class="group cursor-pointer tilt-card flex flex-col gap-6" href="/procedural-nexus.html" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Procedural Nexus generative layout displaying point networks and polygonal structural lines from Geometry Nodes." src="./2.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">3D MOTION GRAPHICS</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">PROCEDURAL NEXUS</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</a>
+<!-- Project Card 5 (Staggered) -->
+<div class="group cursor-pointer tilt-card flex flex-col gap-6 md:mt-24" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="3D clay render landscape of a rocky canyon with an arcane rift and subtle glowing energy flow, clean gray background." src="./arcane-rift.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">SCENARIO</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">ARCANE RIFT</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</div>
+<!-- Project Card 6 -->
+<a class="group cursor-pointer tilt-card flex flex-col gap-6" href="/refined-pulse.html" style="transform: rotateX(0deg) rotateY(0deg) translateY(0px);">
+<div class="relative aspect-[4/5] overflow-hidden project-card-glow rounded-lg">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110" data-alt="Refined Pulse contemporary smartwatch modeling study with reflective metallic body, vivid orange strap, and curved display framing." src="./7.png">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps tracking-widest">View Project</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">3D MODELING</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">REFINED PULSE</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-40 md:mt-64 px-gutter">
+<div class="max-w-container-max mx-auto py-32 border-y border-surface-variant/20 flex flex-col items-center text-center">
+<h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-gradient mb-12">
+                    LET'S BUILD SOMETHING
+                </h2>
+<div class="relative group">
+<a href="/contact.html" class="action-gradient contact-btn-outline px-12 py-6 rounded-full font-headline-lg text-headline-lg-mobile uppercase tracking-tight text-white hover:scale-105 active:scale-95 transition-all duration-300 text-center inline-block">
+                        GET IN TOUCH
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter w-full max-w-container-max mx-auto gap-8">
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase animate-pulse" href="/index.html">AVG</a>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">ArtStation</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">Behance</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">Instagram</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">LinkedIn</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 AVG.DESIGN</p>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.tilt-card');
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = rect.left + rect.width / 2;
+                const cardY = rect.top + rect.height / 2;
+
+                const angleX = (mouseY - cardY) / 40;
+                const angleY = (cardX - mouseX) / 40;
+
+                // Only tilt if mouse is relatively close or we can just apply globally for a floating feel
+                // For performance, let's limit the impact
+                const distance = Math.sqrt(Math.pow(mouseX - cardX, 2) + Math.pow(mouseY - cardY, 2));
+                
+                if (distance < 600) {
+                    card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(${-distance/100}px)`;
+                } else {
+                    card.style.transform = `rotateX(0deg) rotateY(0deg) translateY(0px)`;
+                }
+            });
+        });
+
+        // Magnetic effect for CTA
+        const ctaBtn = document.querySelector('.contact-btn-outline');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('mousemove', (e) => {
+                const rect = ctaBtn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                ctaBtn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.05)`;
+            });
+
+            ctaBtn.addEventListener('mouseleave', () => {
+                ctaBtn.style.transform = `translate(0px, 0px) scale(1)`;
+            });
+        }
+
+        // Navigation, Mobile Menu and Page Transitions
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            if (mobileMenuBtn && mobileMenuOverlay) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = !mobileMenuOverlay.classList.contains('-translate-y-full');
+                    if (isOpen) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        mobileMenuOverlay.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuOverlay.contains(e.target) && e.target !== mobileMenuBtn) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+            }
+
+            // Active Nav Link Highlighting
+            const pathName = window.location.pathname;
+            const pageName = pathName.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkPage = href.split('/').pop();
+                if (pageName === linkPage) {
+                    link.classList.remove('opacity-70', 'text-on-surface-variant');
+                    link.classList.add('opacity-100', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+
+            // Smooth Page Transitions
+            const overlay = document.createElement("div");
+            overlay.className = "page-transition-overlay";
+            document.body.appendChild(overlay);
+            
+            requestAnimationFrame(() => {
+                overlay.classList.add("fade-out");
+            });
+            
+            setTimeout(() => {
+                if (overlay && overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 450);
+
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && !href.startsWith("#") && !link.target && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("javascript:")) {
+                    link.addEventListener("click", (e) => {
+                        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                        const targetFile = href.split('/').pop() || 'index.html';
+                        
+                        if (currentFile !== targetFile) {
+                            e.preventDefault();
+                            
+                            const exitOverlay = document.createElement("div");
+                            exitOverlay.className = "page-transition-overlay";
+                            document.body.appendChild(exitOverlay);
+                            
+                            requestAnimationFrame(() => {
+                                exitOverlay.style.opacity = "0";
+                                requestAnimationFrame(() => {
+                                    exitOverlay.style.transition = "opacity 0.3s ease-in-out";
+                                    exitOverlay.style.opacity = "1";
+                                });
+                            });
+                            
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 300);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
