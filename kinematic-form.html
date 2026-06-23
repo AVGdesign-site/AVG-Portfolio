@@ -1,0 +1,442 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>KINEMATIC FORM | AVG CREATIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e5e2e1",
+                    "on-primary-fixed-variant": "#3e484f",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed": "#d9e4ec",
+                    "secondary": "#ffaceb",
+                    "primary-fixed-dim": "#bdc8d0",
+                    "background": "#131313",
+                    "on-error": "#690005",
+                    "tertiary-fixed": "#dee2ee",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c2c6d2",
+                    "on-secondary-fixed": "#390034",
+                    "surface": "#131313",
+                    "outline": "#8d9194",
+                    "on-secondary": "#5d0055",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#273238",
+                    "surface-dim": "#131313",
+                    "on-surface-variant": "#c4c7ca",
+                    "surface-bright": "#3a3939",
+                    "on-secondary-fixed-variant": "#830079",
+                    "on-tertiary": "#2c3139",
+                    "tertiary-container": "#dce0ec",
+                    "tertiary": "#fefcff",
+                    "on-tertiary-fixed": "#171c24",
+                    "error-container": "#93000a",
+                    "surface-container": "#201f1f",
+                    "primary-container": "#d7e2ea",
+                    "secondary-fixed-dim": "#ffaceb",
+                    "secondary-container": "#b805aa",
+                    "error": "#ffb4ab",
+                    "on-primary-container": "#5a656b",
+                    "outline-variant": "#43474a",
+                    "surface-tint": "#bdc8d0",
+                    "on-tertiary-container": "#5e636d",
+                    "surface-container-highest": "#353534",
+                    "inverse-primary": "#556067",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffd7f2",
+                    "on-primary-fixed": "#131d23",
+                    "primary": "#fcfdff",
+                    "on-secondary-container": "#ffdaf2",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#424750"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "stack-overlap": "60px",
+                    "gutter": "clamp(1rem, 5vw, 4rem)"
+            },
+            "fontFamily": {
+                    "body-md": ["Kanit"],
+                    "display-hero": ["Kanit"],
+                    "label-caps": ["Kanit"],
+                    "headline-lg-mobile": ["Kanit"],
+                    "headline-lg": ["Kanit"]
+            },
+            "fontSize": {
+                    "body-md": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "display-hero": ["clamp(3.5rem, 12vw, 10rem)", {"lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "900"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["3rem", {"lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "headline-lg": ["clamp(2.5rem, 8vw, 5rem)", {"lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        
+
+        body {
+            background-color: #0C0C0C;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .obsidian-gradient {
+            background: linear-gradient(135deg, #ffd7f2 0%, #ffaceb 50%, #830079 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chrome-border {
+            border: 1px solid rgba(215, 226, 234, 0.1);
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .magnetic-hover {
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .staggered-grid {
+            column-count: 2;
+            column-gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .staggered-grid {
+                column-count: 1;
+            }
+        }
+        .grid-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        .action-gradient-btn {
+            background: linear-gradient(90deg, #ffaceb, #ffffff, #ffd7f2);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .action-gradient-btn::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid white;
+            border-radius: 9999px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .contact-btn-gradient {
+            background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px transparent;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .contact-btn-gradient:hover {
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Page Transition Overlay */
+        .page-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0C0C0C;
+            z-index: 99999;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .page-transition-overlay.fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-[100] bg-transparent backdrop-blur-xl border-b border-primary/10">
+<div class="flex justify-between items-center w-full px-gutter py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile font-black tracking-tighter text-primary uppercase" href="/index.html">
+                AVG
+            </a>
+<div class="hidden md:flex items-center gap-10">
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/about.html">About</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/projects.html">Projects</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="/contact.html" class="contact-btn-gradient px-8 py-3 rounded-full text-white font-label-caps text-center inline-block">
+                Contact
+            </a>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Menu">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl flex flex-col items-center gap-6 md:hidden transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none border-b border-primary/10 py-8 z-[-1]" id="mobile-menu-overlay">
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/about.html">About</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/projects.html">Projects</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/contact.html">Contact</a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative md:min-h-screen flex flex-col items-center justify-center pt-32 pb-10 md:pb-0 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+
+</div>
+<div class="relative z-10 text-center px-gutter">
+<h1 class="font-display-hero text-display-hero obsidian-gradient uppercase mb-8">
+                    KINEMATIC FORM
+                </h1>
+<div class="w-full max-w-5xl mx-auto mt-12 aspect-[16/9] chrome-border rounded-xl overflow-hidden relative group">
+<video autoplay loop muted playsinline class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+    <source src="./Kinematic%20Form.mp4" type="video/mp4">
+</video>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0C0C0C] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Info Section -->
+<section class="pt-10 pb-12 md:py-32 px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<!-- Left Column -->
+<div class="md:col-span-4 space-y-12">
+<div>
+<p class="font-label-caps text-xs md:text-sm tracking-widest text-on-surface-variant mb-4">ROLE</p>
+<p class="font-headline-lg text-2xl md:text-3xl font-bold text-primary">Hard Surface Designer</p>
+</div>
+<div>
+<p class="font-label-caps text-xs md:text-sm tracking-widest text-on-surface-variant mb-4">SERVICES</p>
+<ul class="font-body-md text-lg md:text-xl font-light text-on-surface space-y-2">
+<li>Hard-Surface Modeling</li>
+<li>Topology Optimization</li>
+<li>Articulated Structure</li>
+</ul>
+</div>
+<div>
+<p class="font-label-caps text-xs md:text-sm tracking-widest text-on-surface-variant mb-4">YEAR</p>
+<p class="font-headline-lg text-2xl md:text-3xl font-bold text-primary">2025</p>
+</div>
+</div>
+<!-- Right Column -->
+<div class="md:col-span-8">
+<p class="font-label-caps text-xs md:text-sm tracking-widest text-on-surface-variant mb-8">PROJECT OVERVIEW</p>
+<h2 class="font-headline-lg text-4xl md:text-5xl mb-8 text-primary leading-tight">
+                        Redefining the relationship between mechanical function and sculpted precision.
+                    </h2>
+<div class="space-y-6 text-on-surface-variant font-body-md text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+<p>
+                            Kinematic Form is a hard-surface modeling study focused on the design and construction of a compact industrial robotic arm. The project was developed as an exploration of clean mechanical topology, articulated structure, and industrial form language, with special attention given to proportion, silhouette, and the visual balance between simplicity and technical credibility.
+                        </p>
+<p>
+                            The creative direction was centered on presenting the model as a refined mechanical object rather than a purely utilitarian asset. By emphasizing sharp transitions, controlled bevels, circular joint systems, and open structural cutouts, the design conveys strength, mobility, and engineered intent. The restrained material treatment and minimal presentation allow the geometry itself to remain the protagonist, highlighting the discipline behind the modeling process and the clarity of each individual component.
+                        </p>
+<p>
+                            The result is a professional personal project that showcases hard-surface precision through a clean and deliberate industrial design approach. More than a static robotic asset, the piece functions as a study of mechanical articulation, structural hierarchy, and form-driven modeling, where every surface contributes to a cohesive sense of function, control, and technical elegance.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="pt-6 pb-16 md:py-32 px-gutter max-w-container-max mx-auto">
+<div class="staggered-grid">
+<!-- Grid Item 1 -->
+<div class="grid-item chrome-border group overflow-hidden rounded-lg">
+<img class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105" data-alt="Close-up view of the clean mechanical topology and articulated joint details." src="./11.png">
+</div>
+<!-- Grid Item 2 -->
+<div class="grid-item chrome-border group overflow-hidden rounded-lg">
+<img class="w-full h-auto transform group-hover:scale-105 transition-transform duration-500" data-alt="Restrained material treatment emphasizing sharp transitions and controlled bevels." src="./11.png">
+</div>
+<!-- Grid Item 3 -->
+<div class="grid-item chrome-border group overflow-hidden rounded-lg">
+<img class="w-full h-auto transform group-hover:scale-105 transition-transform duration-500" data-alt="Front profile showing open structural cutouts and circular joint systems." src="./11.png">
+</div>
+<!-- Grid Item 4 -->
+<div class="grid-item chrome-border group overflow-hidden rounded-lg">
+<img class="w-full h-auto transform group-hover:scale-105 transition-transform duration-500" data-alt="Full silhouette of the industrial robotic arm design against a dark background." src="./11.png">
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-48 px-gutter border-t border-on-primary-fixed-variant/10 relative overflow-hidden">
+<div class="max-w-container-max mx-auto text-center relative z-10">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">NEXT PROJECT</p>
+<a class="group block" href="/procedural-nexus.html">
+<h3 class="font-display-hero text-[clamp(2.5rem,10vw,8rem)] font-black text-on-surface-variant group-hover:text-primary transition-colors duration-500 uppercase tracking-tighter">
+                        PROCEDURAL NEXUS
+                    </h3>
+<div class="flex items-center justify-center gap-4 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="font-label-caps text-label-caps tracking-widest uppercase">View Project</span>
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</div>
+</a>
+</div>
+<!-- Background Decoration -->
+<div class="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-20 pointer-events-none">
+
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter w-full max-w-container-max mx-auto gap-8">
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase animate-pulse" href="/index.html">AVG</a>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">ArtStation</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">Behance</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">Instagram</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-all" href="#">LinkedIn</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 AVG.DESIGN</p>
+</div>
+</footer>
+<script>
+        // Magnetic Hover Micro-interaction for images
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = item.getBoundingClientRect();
+                const x = (e.clientX - left - width / 2) / 15;
+                const y = (e.clientY - top - height / 2) / 15;
+                const img = item.querySelector('img');
+                if (img) {
+                    img.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
+                }
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const img = item.querySelector('img');
+                if (img) {
+                    img.style.transform = `scale(1) translate(0px, 0px)`;
+                }
+            });
+        });
+
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.grid-item').forEach(item => {
+            item.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(item);
+        });
+
+        // Navigation, Mobile Menu and Page Transitions
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            if (mobileMenuBtn && mobileMenuOverlay) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = !mobileMenuOverlay.classList.contains('-translate-y-full');
+                    if (isOpen) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        mobileMenuOverlay.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuOverlay.contains(e.target) && e.target !== mobileMenuBtn) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+            }
+
+            // Active Nav Link Highlighting
+            const pathName = window.location.pathname;
+            const pageName = pathName.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkPage = href.split('/').pop();
+                if (pageName === linkPage) {
+                    link.classList.remove('opacity-70', 'text-on-surface-variant');
+                    link.classList.add('opacity-100', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+
+            // Smooth Page Transitions
+            const overlay = document.createElement("div");
+            overlay.className = "page-transition-overlay";
+            document.body.appendChild(overlay);
+            
+            requestAnimationFrame(() => {
+                overlay.classList.add("fade-out");
+            });
+            
+            setTimeout(() => {
+                if (overlay && overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 450);
+
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && !href.startsWith("#") && !link.target && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("javascript:")) {
+                    link.addEventListener("click", (e) => {
+                        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                        const targetFile = href.split('/').pop() || 'index.html';
+                        
+                        if (currentFile !== targetFile) {
+                            e.preventDefault();
+                            
+                            const exitOverlay = document.createElement("div");
+                            exitOverlay.className = "page-transition-overlay";
+                            document.body.appendChild(exitOverlay);
+                            
+                            requestAnimationFrame(() => {
+                                exitOverlay.style.opacity = "0";
+                                requestAnimationFrame(() => {
+                                    exitOverlay.style.transition = "opacity 0.3s ease-in-out";
+                                    exitOverlay.style.opacity = "1";
+                                });
+                            });
+                            
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 300);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>
