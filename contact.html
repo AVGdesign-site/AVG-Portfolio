@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact | AVG.DESIGN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#2c3139",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c2c6d2",
+                        "inverse-primary": "#556067",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#ffdaf2",
+                        "on-primary": "#273238",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface-variant": "#c4c7ca",
+                        "surface-tint": "#bdc8d0",
+                        "secondary": "#ffaceb",
+                        "on-primary-fixed": "#131d23",
+                        "surface-bright": "#3a3939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary": "#fefcff",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#bdc8d0",
+                        "on-secondary-fixed": "#390034",
+                        "background": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#b805aa",
+                        "outline": "#8d9194",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#3e484f",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed-dim": "#ffaceb",
+                        "outline-variant": "#43474a",
+                        "on-tertiary-container": "#5e636d",
+                        "on-tertiary-fixed-variant": "#424750",
+                        "on-tertiary-fixed": "#171c24",
+                        "surface": "#131313",
+                        "secondary-fixed": "#ffd7f2",
+                        "on-secondary": "#5d0055",
+                        "primary-fixed": "#d9e4ec",
+                        "on-secondary-fixed-variant": "#830079",
+                        "on-primary-container": "#5a656b",
+                        "tertiary-fixed": "#dee2ee",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#dce0ec",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#d7e2ea",
+                        "surface-dim": "#131313",
+                        "primary": "#fcfdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-overlap": "60px",
+                        "gutter": "clamp(1rem, 5vw, 4rem)",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Kanit"],
+                        "headline-lg-mobile": ["Kanit"],
+                        "label-caps": ["Kanit"],
+                        "display-hero": ["Kanit"],
+                        "body-md": ["Kanit"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["clamp(2.5rem, 8vw, 5rem)", { "lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["3rem", { "lineHeight": "1.0", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "label-caps": ["0.75rem", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "display-hero": ["clamp(3.5rem, 12vw, 10rem)", { "lineHeight": "0.9", "letterSpacing": "-0.05em", "fontWeight": "900" }],
+                        "body-md": ["1.125rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        
+
+        body {
+            background-color: #0C0C0C;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .action-gradient {
+            background: linear-gradient(135deg, #d7e2ea 0%, #bdc8d0 50%, #556067 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to bottom right, #fcfdff, #8d9194);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-input {
+            background: transparent;
+            border-bottom: 1px solid rgba(215, 226, 234, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .contact-input:focus,
+        .contact-input:not(:placeholder-shown),
+        .contact-input:-webkit-autofill {
+            outline: none;
+            border-bottom-color: #fcfdff;
+            box-shadow: 0 4px 12px -6px rgba(252, 253, 255, 0.3);
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .magnetic-button {
+            transition: transform 0.2s ease-out;
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            background: #fcfdff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .floating-object {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(5deg);
+            }
+        }
+
+        /* Page Transition Overlay */
+        .page-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0C0C0C;
+            z-index: 99999;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .page-transition-overlay.fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md">
+    <div class="custom-cursor" id="cursor"></div>
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-[100] bg-transparent backdrop-blur-xl border-b border-primary/10">
+        <div class="flex justify-between items-center w-full px-gutter py-6 max-w-container-max mx-auto">
+            <a class="font-headline-lg text-headline-lg-mobile font-black tracking-tighter text-primary uppercase"
+                href="/index.html">
+                AVG
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300"
+                    href="/about.html">About</a>
+                <a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300"
+                    href="/projects.html">Projects</a>
+                <a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300"
+                    href="/contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/contact.html"
+                    class="contact-btn-gradient px-8 py-3 rounded-full text-white font-label-caps text-center inline-block">
+                    Contact
+                </a>
+                <button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-3xl"
+                        style="font-variation-settings: 'FILL' 0;">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div class="absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl flex flex-col items-center gap-6 md:hidden transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none border-b border-primary/10 py-8 z-[-1]"
+            id="mobile-menu-overlay">
+            <a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors"
+                href="/about.html">About</a>
+            <a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors"
+                href="/projects.html">Projects</a>
+            <a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors"
+                href="/contact.html">Contact</a>
+        </div>
+    </nav>
+    <main class="pt-32 min-h-screen">
+        <!-- Hero Section -->
+        <section class="px-gutter max-w-container-max mx-auto py-[15vh]">
+            <div class="relative z-10">
+                <p class="font-label-caps text-label-caps text-on-surface-variant mb-6">AVAILABLE FOR NEW PROJECTS</p>
+                <h1 class="font-display-hero text-display-hero text-gradient">SAY HELLO</h1>
+            </div>
+        </section>
+        <!-- Main Content Grid -->
+        <section
+            class="px-gutter max-w-container-max mx-auto pb-4 lg:pb-[20vh] grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <!-- Contact Info (Left) -->
+            <div class="lg:col-span-5 space-y-16 order-2 lg:order-1">
+                <div>
+                    <h2 class="font-label-caps text-label-caps text-on-surface-variant mb-8">DIRECT CHANNEL</h2>
+                    <a class="font-headline-lg text-headline-lg block hover:text-primary-fixed-dim transition-all duration-500 break-words"
+                        href="mailto:alejandrovg.design@gmail.com">
+                        alejandrovg.<br>design@gmail<br>.com
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <h3 class="font-label-caps text-label-caps text-on-surface-variant">SOCIALS</h3>
+                        <ul class="space-y-3">
+                            <li class=""><a class="font-headline-lg text-[2rem] hover:opacity-50 transition-opacity"
+                                    href="#">LINKEDIN</a></li>
+                            <li class=""><a class="font-headline-lg text-[2rem] hover:opacity-50 transition-opacity"
+                                    href="#">INSTAGRAM</a></li>
+                            <li class=""><a class="font-headline-lg text-[2rem] hover:opacity-50 transition-opacity"
+                                    href="#">BEHANCE</a></li>
+                            <li class=""><a class="font-headline-lg text-[2rem] hover:opacity-50 transition-opacity"
+                                    href="#">ARTSTATION</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-label-caps text-label-caps text-on-surface-variant">PHONE</h3>
+                        <p class="font-headline-lg text-2xl sm:text-3xl text-on-surface whitespace-nowrap">
+                            +52 5548447410
+                        </p>
+                    </div>
+                </div>
+                <!-- Decorative Object Placeholder -->
+                <div class="relative w-full aspect-square max-w-[400px] hidden lg:flex items-center justify-center">
+                    <div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px]"></div>
+
+                    <!-- In case of animation fallback, a high-end 3D visual description -->
+                    <div class="hidden"
+                        data-alt="A macro close-up of a highly detailed iridescent liquid metal sphere floating in a dark vacuum. The surface reflects sharp, cool studio lighting with hints of magenta and cyan. The lighting is high-contrast, emphasizing the fluid, high-tech textures of the 3D object against the deep black background.">
+                    </div>
+                </div>
+            </div>
+            <!-- Form (Right) -->
+            <div class="lg:col-span-7 order-1 lg:order-2">
+                <div
+                    class="bg-surface-container-lowest/50 p-8 md:p-12 border border-surface-variant/10 rounded-xl backdrop-blur-sm">
+                    <h2 class="font-label-caps text-label-caps text-on-surface-variant mb-12">PROJECT INQUIRY</h2>
+                    <form name="contact" method="POST" netlify class="space-y-12" id="contact-form" action="/">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <p>
+                                <label
+                                    class="font-label-caps text-label-caps text-on-surface-variant flex flex-col gap-4">
+                                    NAME
+                                    <input id="contact-name" name="name" required
+                                        class="contact-input py-4 text-on-surface placeholder:text-on-surface-variant/30"
+                                        placeholder="Your full name" type="text">
+                                </label>
+                            </p>
+                            <p>
+                                <label
+                                    class="font-label-caps text-label-caps text-on-surface-variant flex flex-col gap-4">
+                                    EMAIL
+                                    <input id="contact-email" name="email" required
+                                        class="contact-input py-4 text-on-surface placeholder:text-on-surface-variant/30"
+                                        placeholder="example@studio.com" type="email">
+                                </label>
+                            </p>
+                        </div>
+                        <p>
+                            <label class="font-label-caps text-label-caps text-on-surface-variant flex flex-col gap-4">
+                                SERVICE TYPE
+                                <input type="hidden" name="service_type" id="service-type-input" value="MOTION GRAPHICS" />
+                                <span class="flex flex-wrap gap-4 pt-2">
+                                    <button
+                                        class="service-btn px-6 py-2 border border-surface-variant/40 rounded-full text-label-caps text-on-surface-variant/80 hover:border-primary transition-all"
+                                        type="button" data-service="3D ANIMATION">3D ANIMATION</button>
+                                    <button
+                                        class="service-btn px-6 py-2 border border-surface-variant/40 rounded-full text-label-caps text-on-surface-variant/80 hover:border-primary transition-all"
+                                        type="button" data-service="PRODUCT DESIGN">PRODUCT DESIGN</button>
+                                    <button
+                                        class="service-btn px-6 py-2 border border-surface-variant/40 rounded-full text-label-caps text-on-surface-variant/80 hover:border-primary transition-all"
+                                        type="button" data-service="INTERACTIVE UI">INTERACTIVE UI</button>
+                                    <button
+                                        class="service-btn px-6 py-2 border border-primary bg-primary text-[#0C0C0C] rounded-full text-label-caps transition-all"
+                                        type="button" data-service="MOTION GRAPHICS">MOTION GRAPHICS</button>
+                                </span>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="font-label-caps text-label-caps text-on-surface-variant flex flex-col gap-4">
+                                PROJECT DETAILS
+                                <textarea id="contact-details" name="details" required
+                                    class="contact-input py-4 text-on-surface placeholder:text-on-surface-variant/30 resize-none"
+                                    placeholder="Briefly describe your vision..." rows="5"></textarea>
+                            </label>
+                        </p>
+                        <p class="pt-8">
+                            <button
+                                class="action-gradient group relative w-full md:w-auto px-12 py-5 rounded-lg text-on-primary font-bold tracking-widest uppercase transition-all hover:scale-[1.02] active:scale-95 overflow-hidden"
+                                type="submit">
+                                <span class="relative z-10">Send</span>
+                                <div
+                                    class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity">
+                                </div>
+                                <!-- Floating tech outline effect from style guidance -->
+                                <div
+                                    class="absolute -inset-1 border border-white/20 rounded-lg translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform">
+                                </div>
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full pt-4 pb-12 md:py-12">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter w-full max-w-container-max mx-auto gap-8">
+            <a class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase animate-pulse"
+                href="/index.html">AVG</a>
+            <div class="flex gap-6">
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-all"
+                    href="#">ArtStation</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-all"
+                    href="#">Behance</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-all"
+                    href="#">Instagram</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-all"
+                    href="#">LinkedIn</a>
+            </div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant">© 2026 AVG.DESIGN</div>
+        </div>
+    </footer>
+    <script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.style.transform += ' scale(2.5)');
+            el.addEventListener('mouseleave', () => cursor.style.transform = cursor.style.transform.replace(' scale(2.5)', ''));
+        });
+
+        // Magnetic Hover Logic
+        const magneticElements = document.querySelectorAll('.magnetic-button');
+        magneticElements.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // Service type selector logic
+        const serviceBtns = document.querySelectorAll('.service-btn');
+        const serviceInput = document.getElementById('service-type-input');
+        let selectedService = 'MOTION GRAPHICS';
+
+        serviceBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Deselect all
+                serviceBtns.forEach(b => {
+                    b.className = 'service-btn px-6 py-2 border border-surface-variant/40 rounded-full text-label-caps text-on-surface-variant/80 hover:border-primary transition-all';
+                });
+                // Select clicked
+                btn.className = 'service-btn px-6 py-2 border border-primary bg-primary text-[#0C0C0C] rounded-full text-label-caps transition-all';
+                selectedService = btn.getAttribute('data-service');
+                serviceInput.value = selectedService;
+            });
+        });
+
+        // Reset selected service to default MOTION GRAPHICS
+        function resetServiceSelection() {
+            serviceBtns.forEach(b => {
+                if (b.getAttribute('data-service') === 'MOTION GRAPHICS') {
+                    b.className = 'service-btn px-6 py-2 border border-primary bg-primary text-[#0C0C0C] rounded-full text-label-caps transition-all';
+                } else {
+                    b.className = 'service-btn px-6 py-2 border border-surface-variant/40 rounded-full text-label-caps text-on-surface-variant/80 hover:border-primary transition-all';
+                }
+            });
+            selectedService = 'MOTION GRAPHICS';
+            serviceInput.value = 'MOTION GRAPHICS';
+        }
+
+        // Parallax Tilting Logic for decorative items (if needed)
+        window.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            const decorative = document.querySelector('.floating-object');
+            if (decorative) {
+                decorative.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+            }
+        });
+
+        // Navigation, Mobile Menu and Page Transitions
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+            if (mobileMenuBtn && mobileMenuOverlay) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = !mobileMenuOverlay.classList.contains('-translate-y-full');
+                    if (isOpen) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        mobileMenuOverlay.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuOverlay.contains(e.target) && e.target !== mobileMenuBtn) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+            }
+
+            // Active Nav Link Highlighting
+            const pathName = window.location.pathname;
+            const pageName = pathName.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkPage = href.split('/').pop();
+                if (pageName === linkPage) {
+                    link.classList.remove('opacity-70', 'text-on-surface-variant');
+                    link.classList.add('opacity-100', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+
+            // Smooth Page Transitions
+            const overlay = document.createElement("div");
+            overlay.className = "page-transition-overlay";
+            document.body.appendChild(overlay);
+
+            requestAnimationFrame(() => {
+                overlay.classList.add("fade-out");
+            });
+
+            setTimeout(() => {
+                if (overlay && overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 450);
+
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && !href.startsWith("#") && !link.target && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("javascript:")) {
+                    link.addEventListener("click", (e) => {
+                        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                        const targetFile = href.split('/').pop() || 'index.html';
+
+                        if (currentFile !== targetFile) {
+                            e.preventDefault();
+
+                            const exitOverlay = document.createElement("div");
+                            exitOverlay.className = "page-transition-overlay";
+                            document.body.appendChild(exitOverlay);
+
+                            requestAnimationFrame(() => {
+                                exitOverlay.style.opacity = "0";
+                                requestAnimationFrame(() => {
+                                    exitOverlay.style.transition = "opacity 0.3s ease-in-out";
+                                    exitOverlay.style.opacity = "1";
+                                });
+                            });
+
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 300);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
