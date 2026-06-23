@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ABOUT | AVG.DESIGN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed-variant": "#3e484f",
+                "inverse-on-surface": "#313030",
+                "tertiary-fixed-dim": "#c2c6d2",
+                "outline-variant": "#43474a",
+                "primary-fixed-dim": "#bdc8d0",
+                "on-tertiary": "#2c3139",
+                "on-primary-fixed": "#131d23",
+                "tertiary-fixed": "#dee2ee",
+                "tertiary": "#fefcff",
+                "on-secondary-container": "#ffdaf2",
+                "primary-fixed": "#d9e4ec",
+                "on-surface": "#e5e2e1",
+                "inverse-surface": "#e5e2e1",
+                "error": "#ffb4ab",
+                "secondary": "#ffaceb",
+                "on-error": "#690005",
+                "on-surface-variant": "#c4c7ca",
+                "outline": "#8d9194",
+                "secondary-container": "#b805aa",
+                "on-error-container": "#ffdad6",
+                "inverse-primary": "#556067",
+                "surface-container-highest": "#353534",
+                "surface-bright": "#3a3939",
+                "on-tertiary-fixed-variant": "#424750",
+                "surface": "#131313",
+                "surface-dim": "#131313",
+                "background": "#0C0C0C",
+                "on-secondary": "#5d0055",
+                "surface-container": "#201f1f",
+                "on-tertiary-fixed": "#171c24",
+                "surface-variant": "#353534",
+                "tertiary-container": "#dce0ec",
+                "on-tertiary-container": "#5e636d",
+                "surface-tint": "#bdc8d0",
+                "on-secondary-fixed-variant": "#830079",
+                "secondary-fixed": "#ffd7f2",
+                "surface-container-low": "#1c1b1b",
+                "on-secondary-fixed": "#390034",
+                "secondary-fixed-dim": "#ffaceb",
+                "error-container": "#93000a",
+                "surface-container-high": "#2a2a2a",
+                "on-primary": "#273238",
+                "primary-container": "#d7e2ea",
+                "primary": "#fcfdff",
+                "surface-container-lowest": "#0e0e0e",
+                "on-primary-container": "#5a656b",
+                "on-background": "#e5e2e1"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1440px",
+                "gutter": "clamp(1rem, 5vw, 4rem)",
+                "stack-overlap": "60px"
+        },
+        "fontFamily": {
+                "label-caps": [
+                        "Kanit"
+                ],
+                "headline-lg": [
+                        "Kanit"
+                ],
+                "headline-lg-mobile": [
+                        "Kanit"
+                ],
+                "display-hero": [
+                        "Kanit"
+                ],
+                "body-md": [
+                        "Kanit"
+                ]
+        },
+        "fontSize": {
+                "label-caps": [
+                        "0.75rem",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.2em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "clamp(2.5rem, 8vw, 5rem)",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "3rem",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "display-hero": [
+                        "clamp(3.5rem, 12vw, 10rem)",
+                        {
+                                "lineHeight": "0.9",
+                                "letterSpacing": "-0.05em",
+                                "fontWeight": "900"
+                        }
+                ],
+                "body-md": [
+                        "1.125rem",
+                        {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "300"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        
+
+        body {
+            background-color: #0C0C0C;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .signature-gradient {
+            background: linear-gradient(135deg, #fcfdff 0%, #bdc8d0 50%, #556067 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .action-gradient-bg {
+            background: linear-gradient(135deg, #fcfdff 0%, #d7e2ea 100%);
+        }
+        
+        .accent-gradient-text {
+             background: linear-gradient(90deg, #00A3FF 0%, #0075FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .magnetic-card {
+            transition: transform 0.2s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.02);
+            border-radius: 1rem;
+        }
+        
+        .magnetic-card:hover {
+             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .static-card {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.02);
+            border-radius: 1rem;
+            transition: border-color 0.2s ease;
+        }
+        
+        .static-card:hover {
+             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .floating-asset {
+            animation: float 6s ease-in-out infinite;
+        }
+    
+        .contact-btn-gradient {
+            background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px transparent;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .contact-btn-gradient:hover {
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 0 0 4px rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .tag-pill {
+            background-color: rgba(0, 163, 255, 0.1);
+            color: #00A3FF;
+            border: 1px solid rgba(0, 163, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .tag-pill .material-symbols-outlined {
+            font-size: 1.125rem;
+        }
+        
+        .tool-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background-color 0.2s ease;
+        }
+        
+        .tool-card:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+        
+        .tool-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Page Transition Overlay */
+        .page-transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0C0C0C;
+            z-index: 99999;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .page-transition-overlay.fade-out {
+            opacity: 0;
+        }
+        </style>
+</head>
+<body class="font-body-md text-body-md">
+<div class="custom-cursor" id="cursor" style="left: 497px; top: 16px; transform: scale(1);"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-[100] bg-transparent backdrop-blur-xl border-b border-primary/10">
+<div class="flex justify-between items-center w-full px-gutter py-6 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg-mobile font-black tracking-tighter text-primary uppercase" href="/index.html">
+                AVG
+            </a>
+<div class="hidden md:flex items-center gap-10">
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/about.html">About</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/projects.html">Projects</a>
+<a class="nav-link text-on-surface-variant font-label-caps opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300" href="/contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="/contact.html" class="contact-btn-gradient px-8 py-3 rounded-full text-white font-label-caps text-center inline-block">
+                Contact
+            </a>
+<button class="md:hidden text-primary p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Menu">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl flex flex-col items-center gap-6 md:hidden transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none border-b border-primary/10 py-8 z-[-1]" id="mobile-menu-overlay">
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/about.html">About</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/projects.html">Projects</a>
+<a class="text-primary font-headline-lg text-3xl uppercase tracking-wider hover:text-secondary transition-colors" href="/contact.html">Contact</a>
+</div>
+</nav>
+<main class="relative pt-24 md:pt-32">
+<!-- Background Decor -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute top-[20%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-primary/5 blur-[120px]"></div>
+</div>
+<!-- Section 1: Hero -->
+<section class="md:min-h-[60vh] flex flex-col justify-center px-gutter max-w-container-max mx-auto relative pt-8 pb-4 md:pt-0 md:pb-0 mb-4 md:mb-12">
+<div class="z-10">
+<p class="font-label-caps text-label-caps text-primary mb-6 tracking-[0.3em]">CRAFTING DIMENSIONS</p>
+<h1 class="font-display-hero text-display-hero signature-gradient uppercase">
+                    ABOUT<br/>ALEX
+                </h1>
+</div>
+</section>
+<!-- Section 2: Bio & Experience Grid -->
+<section class="pt-2 pb-[5vh] md:py-[5vh] px-gutter max-w-container-max mx-auto">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Bio Card -->
+<div class="magnetic-card p-10 flex flex-col gap-6">
+<div>
+<span class="tag-pill"><span class="material-symbols-outlined">person</span> Who I am</span>
+</div>
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-variant/30 border border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary/50">face</span>
+</div>
+<h2 class="text-4xl font-bold font-headline-lg-mobile text-primary mt-2">I'm Alejandro Valenzuela.</h2>
+<div class="text-on-surface-variant space-y-6 text-lg font-body-md font-light leading-relaxed">
+<p>I'm a Product Designer focused on building thoughtful, scalable digital products that balance user needs with business goals. My work sits at the intersection of strategy, usability, and visual craft — helping teams turn complex ideas into intuitive, high-impact experiences.</p>
+<p>I collaborate closely with founders, product managers, and engineers to ensure every design decision supports clarity, performance, and long-term growth.</p>
+</div>
+</div>
+<!-- Experience Card -->
+<div class="magnetic-card p-10 flex flex-col gap-8">
+<div>
+<span class="tag-pill"><span class="material-symbols-outlined">work</span> Experience</span>
+</div>
+<div class="space-y-8 mt-4">
+<!-- Role 1 -->
+<div class="flex justify-between items-start border-b border-white/5 pb-6">
+<div>
+<h3 class="text-xl font-bold accent-gradient-text font-headline-lg-mobile">Graphic Designer</h3>
+</div>
+<div class="text-right">
+<div class="text-primary font-medium">AR Soluciones Integrales</div>
+<div class="text-on-surface-variant/60 text-sm mt-1">2022-2025</div>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="flex justify-between items-start border-b border-white/5 pb-6">
+<div>
+<h3 class="text-xl font-bold accent-gradient-text font-headline-lg-mobile">3D Artist</h3>
+</div>
+<div class="text-right">
+<div class="text-primary font-medium">Freelancer</div>
+<div class="text-on-surface-variant/60 text-sm mt-1">2022-2026</div>
+</div>
+</div>
+<!-- Role 3 -->
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold accent-gradient-text font-headline-lg-mobile">UI/UX Designer</h3>
+</div>
+<div class="text-right">
+<div class="text-primary font-medium">Freelancer</div>
+<div class="text-on-surface-variant/60 text-sm mt-1">2025-2026</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><!-- Section: Technical Expertise (Imported) -->
+<section class="py-[15vh] px-gutter max-w-container-max mx-auto">
+<div class="mb-20">
+<h2 class="font-label-caps text-label-caps text-primary mb-4">CORE DOMAINS</h2>
+<h3 class="font-headline-lg text-headline-lg">TECHNICAL EXPERTISE</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
+<!-- Skill 1 -->
+<div class="magnetic-card bg-background p-12 hover:bg-surface-container transition-colors group rounded-none">
+<span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block" style="font-variation-settings: 'FILL' 1;">view_in_ar</span>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-4">Product Modeling</h4>
+<p class="text-on-surface-variant font-body-md">Hyper-realistic 3D rendering and lighting for premium product and packaging commercial campaigns.</p>
+</div>
+<!-- Skill 2 -->
+<div class="magnetic-card bg-background p-12 hover:bg-surface-container transition-colors group rounded-none">
+<span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block" style="font-variation-settings: 'FILL' 1;">devices</span>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-4">UI/UX Design</h4>
+<p class="text-on-surface-variant font-body-md">Accessible interfaces, user research, and interactive prototyping structured under scalable design systems.</p>
+</div>
+<!-- Skill 3 -->
+<div class="magnetic-card bg-background p-12 hover:bg-surface-container transition-colors group rounded-none">
+<span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-4">Hard Surface Modeling</h4>
+<p class="text-on-surface-variant font-body-md">Technical hard-surface and environment modeling with optimized topology for interactive engines and AR/VR experiences.</p>
+</div>
+<!-- Skill 4 -->
+<div class="magnetic-card bg-background p-12 hover:bg-surface-container transition-colors group rounded-none">
+<span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-4">Motion Graphics</h4>
+<p class="text-on-surface-variant font-body-md">Dynamic digital animation and audiovisual storytelling with 3D integration to boost brand engagement.</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Tools -->
+<section class="py-[10vh] px-gutter max-w-container-max mx-auto mb-20">
+<div class="mb-20">
+<h2 class="font-label-caps text-label-caps text-primary mb-4">MY TOOLKIT</h2>
+<h3 class="font-headline-lg text-headline-lg">WHAT TOOLS DO I USE?</h3>
+</div>
+<div class="static-card p-8 md:p-12">
+<div class="mb-10">
+<span class="tag-pill"><span class="material-symbols-outlined">layers</span> My full tech stack</span>
+</div>
+<div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Design Tools -->
+<div>
+<h3 class="text-2xl font-bold text-primary mb-6 font-headline-lg-mobile">Design</h3>
+<div class="space-y-3">
+<div class="tool-card">
+<div class="tool-icon text-orange-400">
+<span class="material-symbols-outlined">orbit</span>
+</div>
+<div>
+<div class="text-primary font-medium">Blender</div>
+<div class="text-on-surface-variant text-sm">3D modeling and animation.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-cyan-400">
+<span class="material-symbols-outlined">view_in_ar</span>
+</div>
+<div>
+<div class="text-primary font-medium">Maya</div>
+<div class="text-on-surface-variant text-sm">Industry-standard 3D animation.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-red-400">
+<span class="material-symbols-outlined">texture</span>
+</div>
+<div>
+<div class="text-primary font-medium">Substance</div>
+<div class="text-on-surface-variant text-sm">3D texturing and materials.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-slate-300">
+<span class="material-symbols-outlined">videogame_asset</span>
+</div>
+<div>
+<div class="text-primary font-medium">Unreal</div>
+<div class="text-on-surface-variant text-sm">Real-time 3D and game engine.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-sky-300">
+<span class="material-symbols-outlined">category</span>
+</div>
+<div>
+<div class="text-primary font-medium">Unity</div>
+<div class="text-on-surface-variant text-sm">Interactive 3D development.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-indigo-400">
+<span class="material-symbols-outlined">animation</span>
+</div>
+<div>
+<div class="text-primary font-medium">After Effects</div>
+<div class="text-on-surface-variant text-sm">Motion graphics and visual effects.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-amber-400">
+<span class="material-symbols-outlined">video_camera_back</span>
+</div>
+<div>
+<div class="text-primary font-medium">DaVinci</div>
+<div class="text-on-surface-variant text-sm">Video editing and color grading.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-blue-500">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div>
+<div class="text-primary font-medium">Photoshop</div>
+<div class="text-on-surface-variant text-sm">Digital imaging and editing.</div>
+</div>
+</div>
+<div class="tool-card">
+<div class="tool-icon text-pink-400">
+<span class="material-symbols-outlined">design_services</span>
+</div>
+<div>
+<div class="text-primary font-medium">Figma</div>
+<div class="text-on-surface-variant text-sm">Interface design and prototyping.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Collaboration & Research Column -->
+<div class="space-y-12">
+<!-- Collaboration Tools -->
+<div>
+<h3 class="text-2xl font-bold text-primary mb-6 font-headline-lg-mobile">Collaboration</h3>
+<div class="space-y-3">
+<div class="tool-card">
+<div class="tool-icon text-gray-300">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div>
+<div class="text-primary font-medium">Notion</div>
+<div class="text-on-surface-variant text-sm">Documentation and planning.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Research Tools -->
+<div>
+<h3 class="text-2xl font-bold text-primary mb-6 font-headline-lg-mobile">Research</h3>
+<div class="space-y-3">
+<div class="tool-card">
+<div class="tool-icon text-yellow-400">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<div class="text-primary font-medium">Google Analytics</div>
+<div class="text-on-surface-variant text-sm">Performance tracking.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="py-[15vh] px-gutter bg-[#131313] relative overflow-hidden">
+<div class="max-w-container-max mx-auto text-center flex flex-col items-center">
+<p class="font-label-caps text-label-caps text-primary/50 mb-8 tracking-[0.3em] uppercase">THE FUTURE</p>
+<h2 class="font-display-hero text-headline-lg md:text-display-hero signature-gradient uppercase mb-12 max-w-4xl leading-none">
+      "WE ARE NOT JUST VIEWING THE DIGITAL WORLD; WE ARE ENTERING IT."
+    </h2>
+<div class="w-24 h-px bg-white/10 mb-12"></div>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed opacity-80">
+      My vision is to bridge the gap between static interaction and immersive narrative. As the spatial web evolves, my goal is to lead the design language of these new dimensions, ensuring they remain human-centric and visually breathtaking.
+    </p>
+<a href="/contact.html" class="bg-primary text-on-primary font-label-caps px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300 inline-block text-center">
+      Let's Build Together
+    </a>
+</div>
+<!-- Subtle background glow to match the theme -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-primary/5 blur-[120px] pointer-events-none -z-10"></div>
+</section><footer class="bg-surface-container-lowest w-full py-12 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter w-full max-w-container-max mx-auto gap-8">
+<a class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase animate-pulse" href="/index.html">AVG</a>
+<div class="flex gap-8 text-label-caps font-label-caps text-on-surface-variant">
+<a class="hover:text-secondary transition-all" href="#">ArtStation</a>
+<a class="hover:text-secondary transition-all" href="#">Behance</a>
+<a class="hover:text-secondary transition-all" href="#">Instagram</a>
+<a class="hover:text-secondary transition-all" href="#">LinkedIn</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-50 uppercase">© 2026 AVG.DESIGN</p>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.8)');
+        document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
+
+        // Magnetic Card Effect
+        const cards = document.querySelectorAll('.magnetic-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width/2;
+                const y = e.clientY - rect.top - rect.height/2;
+                card.style.transform = `translate(${x * 0.02}px, ${y * 0.02}px) scale(1.01)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translate(0, 0) scale(1)';
+            });
+        });
+
+        // Navigation, Mobile Menu and Page Transitions
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            
+            if (mobileMenuBtn && mobileMenuOverlay) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = !mobileMenuOverlay.classList.contains('-translate-y-full');
+                    if (isOpen) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    } else {
+                        mobileMenuOverlay.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuOverlay.contains(e.target) && e.target !== mobileMenuBtn) {
+                        mobileMenuOverlay.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    }
+                });
+            }
+
+            // Active Nav Link Highlighting
+            const pathName = window.location.pathname;
+            const pageName = pathName.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                const linkPage = href.split('/').pop();
+                if (pageName === linkPage) {
+                    link.classList.remove('opacity-70', 'text-on-surface-variant');
+                    link.classList.add('opacity-100', 'text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+
+            // Smooth Page Transitions
+            const overlay = document.createElement("div");
+            overlay.className = "page-transition-overlay";
+            document.body.appendChild(overlay);
+            
+            requestAnimationFrame(() => {
+                overlay.classList.add("fade-out");
+            });
+            
+            setTimeout(() => {
+                if (overlay && overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 450);
+
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && !href.startsWith("#") && !link.target && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("javascript:")) {
+                    link.addEventListener("click", (e) => {
+                        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                        const targetFile = href.split('/').pop() || 'index.html';
+                        
+                        if (currentFile !== targetFile) {
+                            e.preventDefault();
+                            
+                            const exitOverlay = document.createElement("div");
+                            exitOverlay.className = "page-transition-overlay";
+                            document.body.appendChild(exitOverlay);
+                            
+                            requestAnimationFrame(() => {
+                                exitOverlay.style.opacity = "0";
+                                requestAnimationFrame(() => {
+                                    exitOverlay.style.transition = "opacity 0.3s ease-in-out";
+                                    exitOverlay.style.opacity = "1";
+                                });
+                            });
+                            
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 300);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>
