@@ -479,7 +479,18 @@
                 }
             });
 
-            // Smooth Page Transitions
+            // Smooth Page Transitions (with bfcache fix)
+            window.addEventListener("pageshow", (event) => {
+                if (event.persisted) {
+                    const exitOverlays = document.querySelectorAll(".page-transition-overlay");
+                    exitOverlays.forEach(o => o.remove());
+                }
+            });
+
+            window.addEventListener("pagehide", () => {
+                const exitOverlays = document.querySelectorAll(".page-transition-overlay");
+                exitOverlays.forEach(o => o.remove());
+            });
             const overlay = document.createElement("div");
             overlay.className = "page-transition-overlay";
             document.body.appendChild(overlay);
