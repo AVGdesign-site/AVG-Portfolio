@@ -20,6 +20,7 @@ export default defineConfig({
         'procedural-nexus': resolve(__dirname, 'procedural-nexus.html'),
         'refined-pulse': resolve(__dirname, 'refined-pulse.html'),
         'web-momentum': resolve(__dirname, 'web-momentum.html'),
+        'sneaker-factory': resolve(__dirname, 'sneaker-factory.html'),
       },
     },
   },
