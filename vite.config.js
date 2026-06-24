@@ -21,6 +21,7 @@ export default defineConfig({
         'refined-pulse': resolve(__dirname, 'refined-pulse.html'),
         'web-momentum': resolve(__dirname, 'web-momentum.html'),
         'sneaker-factory': resolve(__dirname, 'sneaker-factory.html'),
+        'threshold-of-dread': resolve(__dirname, 'threshold-of-dread.html'),
       },
     },
   },
